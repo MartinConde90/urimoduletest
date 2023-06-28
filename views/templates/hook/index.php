@@ -1,4 +1,5 @@
-{*
+<?php
+/**
 * 2007-2023 PrestaShop
 *
 * NOTICE OF LICENSE
@@ -21,28 +22,13 @@
 *  @copyright 2007-2023 PrestaShop SA
 *  @license   http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
 *  International Registered Trademark & Property of PrestaShop SA
-*}
+*/
+header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');
+header('Last-Modified: ' . gmdate('D, d M Y H:i:s') . ' GMT');
 
-<div class="panel">
-	<h3><i class="icon icon-credit-card"></i> {l s='Modulo de test' mod='urimoduletest'}</h3>
-	<p>
-		<strong>{l s='Here is my new generic module!' mod='urimoduletest'}</strong><br />
-		{l s='Thanks to PrestaShop, now I have a great module.' mod='urimoduletest'}<br />
-		{l s='I can configure it using the following configuration form.' mod='urimoduletest'}
-	</p>
-	<br />
-	<p>
-		{l s='This module will boost your sales!' mod='urimoduletest'}
-	</p>
-</div>
+header('Cache-Control: no-store, no-cache, must-revalidate');
+header('Cache-Control: post-check=0, pre-check=0', false);
+header('Pragma: no-cache');
 
-<div class="panel">
-	<h3><i class="icon icon-tags"></i> {l s='Documentation' mod='urimoduletest'}</h3>
-	<p>
-		&raquo; {l s='You can get a PDF documentation to configure this module' mod='urimoduletest'} :
-		<ul>
-			<li><a href="#" target="_blank">{l s='English' mod='urimoduletest'}</a></li>
-			<li><a href="#" target="_blank">{l s='French' mod='urimoduletest'}</a></li>
-		</ul>
-	</p>
-</div>
+header('Location: ../');
+exit;
